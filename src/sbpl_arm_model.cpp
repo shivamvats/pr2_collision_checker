@@ -32,6 +32,8 @@
 #include <tf_conversions/tf_kdl.h>
 #include <pr2_arm_kinematics/pr2_arm_kinematics_utils.h>
 
+#define CONSISTENCY_LIMIT 6.3
+
 using namespace std;
 
 namespace sbpl_arm_planner {
@@ -536,7 +538,7 @@ bool SBPLArmModel::computeIK(const std::vector<double> pose, const std::vector<d
     ik_jnt_pos_in_(i) = angles::normalize_angle(start[i]); // must be normalized for CartToJntSearch
 
   //call IK solver
-  if(pr2_arm_ik_solver_->CartToJntSearch(ik_jnt_pos_in_, frame_des, ik_jnt_pos_out_, 1.0) < 0)
+  if(pr2_arm_ik_solver_->CartToJntSearch(ik_jnt_pos_in_, frame_des, ik_jnt_pos_out_, 1.0, CONSISTENCY_LIMIT) < 0)
     return false;
 
   solution.resize(start.size());
@@ -558,7 +560,7 @@ bool SBPLArmModel::computeIK(const KDL::Frame &frame, const std::vector<double> 
     ik_jnt_pos_in_(i) = angles::normalize_angle(start[i]); // must be normalized for CartToJntSearch
 
   //call IK solver
-  if(pr2_arm_ik_solver_->CartToJntSearch(ik_jnt_pos_in_, f, ik_jnt_pos_out_, 1.0) < 0)
+  if(pr2_arm_ik_solver_->CartToJntSearch(ik_jnt_pos_in_, f, ik_jnt_pos_out_, 1.0, CONSISTENCY_LIMIT) < 0)
     return false;
 
   solution.resize(start.size());
