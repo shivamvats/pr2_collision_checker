@@ -311,7 +311,7 @@ bool SBPLArmModel::initKDLChain(const std::string &fKDL)
     return false;
   }
 
-  kinematics_msgs::KinematicSolverInfo ik_info;
+  moveit_msgs::KinematicSolverInfo ik_info;
   pr2_arm_ik_solver_->getSolverInfo(ik_info);
 
   ROS_DEBUG_NAMED(debug_log_,"[%s] PR2ArmIKSolver Info:", name_.c_str());
