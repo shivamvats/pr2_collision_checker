@@ -1,0 +1,66 @@
+<package>
+  <name>pr2_collision_checker</name>
+  <version>1.0.0</version>
+  <description>pr2_collision_checker</description>
+  <maintainer email="ben@abc.com">Benjamin Cohen</maintainer>
+
+  <license>BSD</license>
+
+  <url type="website">http://ros.org/wiki/pr2_collision_checker</url>
+  <!-- <url type="bugtracker"></url> -->
+
+  <author>Benjamin Cohen</author>
+
+  <!-- Dependencies which this package needs to build itself. -->
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <!-- Dependencies needed to compile this package. -->
+  <build_depend>roscpp</build_depend>
+  <build_depend>tf</build_depend>
+  <build_depend>tf_conversions</build_depend>
+  <build_depend>kdl</build_depend>
+  <build_depend>arm_navigation_msgs</build_depend>
+  <build_depend>leatherman</build_depend>
+  <build_depend>sbpl_manipulation_components</build_depend>
+  <build_depend>sbpl_geometry_utils</build_depend>
+  <build_depend>pviz</build_depend>
+  <build_depend>trajectory_msgs</build_depend>
+  <build_depend>geometry_msgs</build_depend>
+  <build_depend>message_filters</build_depend>
+  <build_depend>pr2_arm_kinematics</build_depend>
+
+  <!-- Dependencies needed after this package is compiled. -->
+  <run_depend>roscpp</run_depend>
+  <run_depend>tf</run_depend>
+  <run_depend>tf_conversions</run_depend>
+  <run_depend>kdl</run_depend>
+  <run_depend>arm_navigation_msgs</run_depend>
+  <run_depend>leatherman</run_depend>
+  <run_depend>sbpl_manipulation_components</run_depend>
+  <run_depend>sbpl_geometry_utils</run_depend>
+  <run_depend>pviz</run_depend>
+  <run_depend>trajectory_msgs</run_depend>
+  <run_depend>geometry_msgs</run_depend>
+  <run_depend>message_filters</run_depend>
+  <run_depend>pr2_arm_kinematics</run_depend>
+
+  <!-- Dependencies needed only for running tests. -->
+  <!-- <test_depend>roscpp</test_depend> -->
+  <!-- <test_depend>tf</test_depend> -->
+  <!-- <test_depend>tf_conversions</test_depend> -->
+  <!-- <test_depend>kdl</test_depend> -->
+  <!-- <test_depend>arm_navigation_msgs</test_depend> -->
+  <!-- <test_depend>leatherman</test_depend> -->
+  <!-- <test_depend>sbpl_manipulation_components</test_depend> -->
+  <!-- <test_depend>sbpl_geometry_utils</test_depend> -->
+  <!-- <test_depend>pviz</test_depend> -->
+  <!-- <test_depend>trajectory_msgs</test_depend> -->
+  <!-- <test_depend>geometry_msgs</test_depend> -->
+  <!-- <test_depend>message_filters</test_depend> -->
+  <!-- <test_depend>pr2_arm_kinematics</test_depend> -->
+
+<export>
+    <cpp lflags="-Wl,-rpath,${prefix}/lib -L${prefix}/lib -lpr2_collision_checker" cflags="-I${prefix}/include -O3 -g"/>
+</export>
+
+</package>
