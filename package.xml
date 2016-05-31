@@ -18,7 +18,7 @@
   <build_depend>roscpp</build_depend>
   <build_depend>tf</build_depend>
   <build_depend>tf_conversions</build_depend>
-  <build_depend>kdl</build_depend>
+  <build_depend>orocos_kdl</build_depend>
   <build_depend>arm_navigation_msgs</build_depend>
   <build_depend>leatherman</build_depend>
   <build_depend>sbpl_manipulation_components</build_depend>
@@ -33,7 +33,7 @@
   <run_depend>roscpp</run_depend>
   <run_depend>tf</run_depend>
   <run_depend>tf_conversions</run_depend>
-  <run_depend>kdl</run_depend>
+  <run_depend>orocos_kdl</run_depend>
   <run_depend>arm_navigation_msgs</run_depend>
   <run_depend>leatherman</run_depend>
   <run_depend>sbpl_manipulation_components</run_depend>
