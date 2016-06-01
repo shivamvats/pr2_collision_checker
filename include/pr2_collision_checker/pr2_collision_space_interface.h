@@ -45,6 +45,7 @@
 #include <arm_navigation_msgs/CollisionMap.h>
 #include <arm_navigation_msgs/CollisionObject.h>
 #include <arm_navigation_msgs/AttachedCollisionObject.h>
+#include <arm_navigation_msgs/RobotState.h>
 #include <geometry_msgs/PoseStamped.h>
 //#include <trajectory_msgs/JointTrajectoryPoint.h> 
 #include <leatherman/utils.h>

@@ -43,7 +43,7 @@ add_library(pr2_collision_checker src/sbpl_arm_model.cpp
                                            src/pr2_collision_space.cpp
                                            src/pr2_collision_space_interface.cpp
                                            src/pr2_collision_space_monitor.cpp)
-target_link_libraries(pr2_collision_checker leatherman sbpl_manipulation_components pviz ${catkin_LIBRARIES})
+target_link_libraries(pr2_collision_checker ${catkin_LIBRARIES})
 
 #add_executable(testVoxelizer src/test_voxelizer.cpp)
 #target_link_libraries(testVoxelizer pr2_collision_checker leatherman)
